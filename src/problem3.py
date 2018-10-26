@@ -2,7 +2,7 @@
 Exam 3, problem 3.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October, 2018.
+         and Hengqi Ye(Luis).  October, 2018.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
@@ -225,7 +225,17 @@ def problem3(seq_of_seq):
     # -------------------------------------------------------------------------
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).
-    # -------------------------------------------------------------------------
+    # -------------------------------------------------------------------------\
+    #s = []
+    for k in range(len(seq_of_seq)):
+        for j in range(k):
+            if is_prime(seq_of_seq[k][j]) is True:
+                return seq_of_seq[k]
+            else:
+                return -1
+
+
+
 
 
 ###############################################################################
