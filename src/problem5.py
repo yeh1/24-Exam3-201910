@@ -4,7 +4,7 @@ Final exam, problem 2.
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
          their colleagues and Hengqi Ye(Luis).  May 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -31,12 +31,12 @@ def is_prime(n):
     Note: The algorithm used here is simple and clear but slow.
     """
     if n < 2:
-        return False
+        return 0
     for k in range(2, (n // 2) + 1):
         if n % k == 0:
-            return False
+            return 0
 
-    return True
+    return 1
     # ------------------------------------------------------------------
     # Students:
     #   Do NOT touch the above  is_prime  function - it has no TO DO.
@@ -218,10 +218,18 @@ def problem5(x):
     # -------------------------------------------------------------------------
 
     while True:
-        y = sum_of_digits(x)
-        if is_prime(y)is True:
+        if is_prime(x) == 1:
             break
-    return y
+            x = sum_of_digits(x)
+        if x < 10:
+            x = x + 10
+            x = sum_of_digits(x)
+
+
+    return x
+
+
+
 
 
 

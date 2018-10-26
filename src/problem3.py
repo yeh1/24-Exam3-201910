@@ -25,12 +25,12 @@ def is_prime(n):
     Note: The algorithm used here is simple and clear but slow.
     """
     if n < 2:
-        return False  # Integers less than 2 are treated as NOT prime
+        return 0  # Integers less than 2 are treated as NOT prime
     for k in range(2, (n // 2) + 1):
         if n % k == 0:
-            return False
+            return 0
 
-    return True
+    return 1
     # -------------------------------------------------------------------------
     # Students:
     #   Do NOT touch the above   is_prime   function - it has no TO-DO.
@@ -226,10 +226,9 @@ def problem3(seq_of_seq):
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------\
-    #s = []
     for k in range(len(seq_of_seq)):
         for j in range(k):
-            if is_prime(seq_of_seq[k][j]) is True:
+            if is_prime(seq_of_seq[k][j]) == 1:
                 return seq_of_seq[k]
             else:
                 return -1
